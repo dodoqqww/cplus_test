@@ -1,0 +1,7 @@
+{
+  "files.associations": {
+    "iomanip": "cpp",
+    "optional": "cpp",
+    "filesystem": "cpp"
+  }
+}

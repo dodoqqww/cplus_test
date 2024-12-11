@@ -1,0 +1,89 @@
+####ENVIRONMNET#############
+
+1. Download Cygwin Installer
+- Visit the official Cygwin website: https://www.cygwin.com/
+- Download the setup-x86_64.exe (for 64-bit systems)
+- Save to a convenient location on your computer
+ 
+2. Run the Cygwin Installer
+- Right-click the downloaded setup-x86_64.exe
+- Choose "Run as administrator"
+- Select "Install from Internet" option
+ 
+3. Choose Installation Settings
+- Select Installation Directory (default is fine: C:\cygwin64)
+- Choose Local Package Directory (where packages will be downloaded)
+- Select "Internet" connection method
+ 
+4. Select Download Mirror
+- Choose a nearby mirror server for faster downloads
+- Typically, select a mirror close to your geographic location
+ 
+5. Essential Package Selection
+When selecting packages, make sure to choose:
+- Development packages:
+  - gcc-core (C compiler)
+  - gcc-g++ (C++ compiler)
+  - make
+  - cmake
+  - gdb (debugger)
+ 
+- Build tools:
+  - autoconf
+  - automake
+  - libtool
+  - binutils
+ 
+- Version control:
+  - git
+  - subversion
+ 
+6. Complete Installation
+- Let the installer download and install selected packages
+- This might take several minutes depending on your internet speed
+ 
+7. Configure Environment Variables (Optional but Recommended)
+- Open System Properties > Advanced > Environment Variables
+- In System Variables, edit "PATH"
+- Add Cygwin bin directory (typically C:\cygwin64\bin)
+ 
+8. First-Time Cygwin Terminal Setup
+- Launch Cygwin Terminal from Start Menu
+- Update package database:
+```bash
+setup-x86_64.exe -q -n
+```
+ 
+9. Verify Installation
+In Cygwin terminal, run:
+```bash
+#Check GCC version
+gcc --version
+
+#Check C++ compiler
+g++ --version
+
+#Check Make
+make --version
+```
+ 
+10. Create a Test Project
+```bash
+#Create a directory for projects
+mkdir ~/Projects
+cd ~/Projects
+
+#Create a simple C++ test file
+cat > hello.cpp << EOL
+#include <iostream>
+int main()
+{
+    std::cout << "Cygwin Development Environment is Ready!" << std::endl;
+    return 0;
+}
+EOL
+
+        g++ hello.cpp -
+    o hello
+
+    ## #INSTALL####
